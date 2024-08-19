@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>File Upload to S3 and DynamoDB</title>
+  </head>
+  <body>
+    <div>
+      <h1>Upload File to S3 and Save Info to DynamoDB</h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        <div>
+          <label for="file">Choose file to upload</label>
+          <input type="file" name="file" id="file">
+        </div>
+        <div>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
