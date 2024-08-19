@@ -8,9 +8,9 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # Configuration
-S3_BUCKET = 'your-s3-bucket-name'
-S3_REGION = 'your-region-name'  # e.g., 'us-east-1'
-DYNAMODB_TABLE = 'your-dynamodb-table-name'
+S3_BUCKET = 'cloud-internship-project3-s3'
+S3_REGION = 'ap-northeast-1'  # e.g., 'us-east-1'
+DYNAMODB_TABLE = 'S3MetadataTable'
 
 # Initialize S3 client
 s3 = boto3.client('s3', region_name=S3_REGION)
