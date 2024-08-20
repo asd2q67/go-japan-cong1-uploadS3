@@ -5,7 +5,6 @@ from flask import Flask, request, redirect, url_for, render_template, flash
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
 
 # Configuration
 S3_BUCKET = 'cloud-internship-project3-s3'
